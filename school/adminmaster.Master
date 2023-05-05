@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminmaster.master.cs" Inherits="school.adminmaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>student marks line chart </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .auto-style1 {
+            width: 1088px;
+            height: 286px;
+        }
+        div
+{
+    z-index: 9999;
+}
+.onTop
+{
+    z-index: 99999;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width:1300px;margin:0 auto">
+            <tr style="width:1300px ; height:50px">
+                <td style="width:30px"><i class="fa fa-building" aria-hidden="true"></i></td>
+             <td style="width:400px"><asp:Label ID="lblhd" runat="server" Text="Welcome Admin!!" Font-Bold="True" Font-Size="X-Large" Font-Italic="True" ForeColor="Red"></asp:Label></td>
+                <td></td>
+            </tr>
+            <tr style="width:1300px ; height:40px ; background-color:black">
+                <td colspan="3">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                        <DynamicHoverStyle CssClass="ontop" BackColor="Teal" Font-Bold="True" Font-Size="Large" />
+                        <DynamicMenuItemStyle CssClass="ontop" Font-Bold="True" Font-Size="Large" HorizontalPadding="30px" VerticalPadding="10px" BackColor="Black" ForeColor="White" />
+                        <DynamicMenuStyle CssClass="ontop" BackColor="Black" HorizontalPadding="4px" VerticalPadding="3px" />
+                        <DynamicSelectedStyle ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Admin/usertype.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="SMS" Value="Events" NavigateUrl="~/Admin/sms.aspx">
+                                </asp:MenuItem>
+                            <asp:MenuItem Text="Reports" Value="Reports">
+                                <asp:MenuItem Text="standard 6" Value="class6" NavigateUrl="~/sixgrid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="standard 7" Value="class7" NavigateUrl="~/seventhgrid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="standard 8" Value="class8" NavigateUrl="~/eightgrid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="standard 9" Value="class9" NavigateUrl="~/ninthgrid.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+
+                            <asp:MenuItem Text="Profile" Value="Logout" NavigateUrl="~/Admin/usertype.aspx">
+                                <asp:MenuItem NavigateUrl="~/Admin/newpswd.aspx" Text="Change Password" Value="Change Password"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/index.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                            </asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/LOGdetaila.aspx" Text="LOG" Value="LOG"></asp:MenuItem>
+
+                        </Items>
+                        <StaticHoverStyle BackColor="Teal" />
+                        <StaticMenuItemStyle Font-Size="Large" ForeColor="white" HorizontalPadding="30px " VerticalPadding="10px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="3" style="border:1px solid black;height:700px;">
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                          
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr style="width:1300px; height:40px;background-color:black;text-align:left;color:#ffffff">
+                <td colspan="3">© 2019 Designed by K. Krishna Koumudi . All rights reserved</td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
+
+
+

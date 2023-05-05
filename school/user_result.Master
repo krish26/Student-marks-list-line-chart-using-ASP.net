@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="user_result.master.cs" Inherits="school.user_result" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        ul {
+  list-style-type: none;
+  margin-left: 50px;
+  padding: 20px;
+  width: 60px;
+  text-align:center;
+} 
+        .button {
+  display: inline-block;
+  border-radius: 75px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px;
+}
+
+        .main{
+             background-image:url(../images/007.jpg);
+             background-size:cover;
+        }
+        .button{
+            opacity:0.7;
+             filter: alpha(opacity=50);
+
+        }
+        .button:hover{
+            background-color:aqua;
+            opacity:5.0;
+             filter: alpha(opacity=50);
+
+        }
+
+        .auto1 {
+           
+             background-color:#0001;
+            box-shadow:inset 0 0.5px 3px rgb(52, 177, 177);
+            text-align:center;
+         
+             
+        }
+        .auto2{
+            width:300px;
+           height: 100%;
+           margin-right:10px;
+           background-color:#0001;
+           box-shadow:inset 0 0.5px 3px rgb(52, 177, 177);
+            
+        }
+        
+        .auto-style1 {
+            width: 100%;
+            height: 100%;
+        }
+        .auto-style2 {
+            width: 333px;
+            height:500px;
+        }
+        
+    </style>
+</head>
+<body class="main">
+    <form id="form1" runat="server">
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style2"><ul class="auto2">
+                <li> <asp:Button CssClass="button" ID="Btn6" runat="server" Text="Class6" Width="140px" Height="100px" OnClick="Btn6_Click"/></li>
+                <li><asp:Button cssclass="button" ID="Btn7" runat="server" Text="Class7" Width="140px" Height="100px" OnClick="Btn7_Click"/></li>
+                <li><asp:Button CssClass="button" ID="Btn8" runat="server" Text="Class8" Width="140px" Height="100px" OnClick="Btn8_Click"/></li>
+                <li><asp:Button CssClass="button" ID="Btn9" runat="server" Text="Class9" Width="140px" Height="100px" OnClick="Btn9_Click"/> </li>
+            </ul></td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"><div class="auto1"></div></asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+        </form>
+</body>
+</html>
